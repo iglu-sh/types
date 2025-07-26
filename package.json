@@ -1,0 +1,20 @@
+{
+  "name": "@iglu-sh/types",
+  "version": "0.0.15",
+  "type": "module",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "repository": "https://github.com/iglu-sh/types",
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
