@@ -5,7 +5,7 @@ export type arch = 'x86_64' | 'aarch64' | 'armv7l' | 'i686' | 'riscv64';
 export type BuildChannelMessage = {
     /*
     * queue: The message is related to the build queue, e.g. a new build is added or a build is cancelled.
-    * build: The message is related to a specific build, e.g. a build update or a build result.
+    * build: The message is related to a specific build, e.g. a build update or a build result. (This is one way and only ever sent to the controller from a node not the otherway around)
     * claim: The message is related to a build claim, e.g. a node claiming a build or the controller responding to a claim.
     * */
     type: 'queue' | 'build' | 'claim'
