@@ -1,3 +1,5 @@
+import {arch} from "@types/controller";
+
 export type uuid = `${string}-${string}-${string}-${string}-${string}`;
 
 export type User = {
@@ -23,6 +25,7 @@ export type builder = {
     trigger: string,
     cron: string,
     webhookURL: string,
+    preferred_arch: arch
 }
 export type builder_runs = {
     id: number,
@@ -185,4 +188,12 @@ export type log = {
     },
     resource_name: string,
     updated_by: User,
+}
+
+
+export type combinedBuilder = {
+    builder: builder,
+    cachix_config: cachixconfigs,
+    git_config: git_configs,
+    build_options: buildoptions,
 }
