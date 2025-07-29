@@ -141,7 +141,8 @@ export type buildoptions = {
     maxjobs: number,
     keep_going: boolean,
     extraargs: string,
-    substituters: Array<substituter>
+    substituters: Array<substituter>,
+    command: string
 }
 export type aggregatedBuilder = {
     builder: builder,
