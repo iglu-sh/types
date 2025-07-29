@@ -148,7 +148,7 @@ export type aggregatedBuilder = {
     runs: builder_runs[],
     git_config: git_configs,
     cachix_config: cachixconfigs,
-    options: buildoptions
+    build_options: buildoptions
 }
 export type xTheEverythingType = {
     cache: cache,
@@ -191,9 +191,4 @@ export type log = {
 }
 
 
-export type combinedBuilder = {
-    builder: builder,
-    cachix_config: cachixconfigs,
-    git_config: git_configs,
-    build_options: buildoptions,
-}
+export type combinedBuilder = Omit<aggregatedBuilder, 'runs'> 
