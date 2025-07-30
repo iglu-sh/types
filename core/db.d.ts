@@ -25,7 +25,8 @@ export type builder = {
     trigger: string,
     cron: string,
     webhookURL: string,
-    preferred_arch: arch
+    preferred_arch: arch,
+    user_id: uuid
 }
 export type builder_runs = {
     id: number,
