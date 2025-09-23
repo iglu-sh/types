@@ -1,6 +1,9 @@
+/*
+* This file includes all types related to Redis messaging between the controller and nodes.
+* */
 import type {healthCheckResponse, nodeRegistrationRequest, websocketMessage} from "../scheduler/index";
 import type {database} from '../core/index'
-export type arch = 'x86_64' | 'aarch64' | 'armv7l' | 'i686' | 'riscv64' | 'aarch64-darwin' | 'x86_64-darwin';
+export type arch = 'x86_64-linux' | 'aarch64-linux' | 'armv7l' | 'i686' | 'riscv64' | 'aarch64-darwin' | 'x86_64-darwin';
 
 export type BuildChannelMessage = {
     /*
@@ -16,20 +19,21 @@ export type BuildChannelMessage = {
 
 type BuildClaimMessage = {
     type: 'claim', // The type of the message
-    build_id: string // The ID of the build
-    node_id: string // The ID of the node that is claiming the build
+    builder_id: string // The ID of the build
+    job_id: string // The ID of the build
 }
 
 type BuildClaimResponse = {
     type: 'claim_response', // The type of the message
-    build_id: string, // The ID of the build
+    builder_id: string, // The ID of the build
+    job_id: string, // The ID of the build
     result: 'approved' | 'rejected', // The result of the claim, either 'approved' or 'rejected'. Sent by the controller to the node to confirm that they got the build
 }
 
 type BuildQueueMessage = {
     type: 'add' | 'cancel',
-    build_id: string, // ID of the build
-    config_id: string // The ID of the config that is being built
+    job_id: string, // ID of the build
+    builder_id: string // The ID of the config that is being built
     target: string | null, // The target node of this message, null if it is a broadcast message (e.g. new build)
     arch: arch
 }
