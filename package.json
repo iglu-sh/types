@@ -1,6 +1,6 @@
 {
   "name": "@iglu-sh/types",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "type": "module",
   "types": "index.d.ts",
   "scripts": {
