@@ -1,6 +1,6 @@
 import type {healthCheckResponse, nodeRegistrationRequest, websocketMessage} from "../scheduler/index";
 import type {database} from '../core/index'
-export type arch = 'x86_64' | 'aarch64' | 'armv7l' | 'i686' | 'riscv64';
+export type arch = 'x86_64' | 'aarch64' | 'armv7l' | 'i686' | 'riscv64' | 'aarch64-darwin' | 'x86_64-darwin';
 
 export type BuildChannelMessage = {
     /*
