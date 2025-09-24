@@ -60,3 +60,8 @@ export type NodeChannelMessage = {
         |
         {} // The data of the message, either a health check response or an empty object
 }
+
+export type BuildQueueEntry = {
+    published_at: number, // The timestamp when the job was added to the queue
+    job: BuildChannelMessage // The job that was added to the queue
+}
