@@ -47,3 +47,8 @@ export type buildUpdate = {
     build_id: string, // The ID of the build
     data: builder_runs
 }
+
+export type queueEntry = {
+    job_id: string,
+    build_config_id: string
+}

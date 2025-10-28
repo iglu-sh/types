@@ -24,7 +24,7 @@ export type builder = {
     enabled: boolean,
     trigger: string,
     cron: string,
-    webhookURL: string,
+    webhookurl: string,
     arch: arch,
 }
 export type builder_runs = {
