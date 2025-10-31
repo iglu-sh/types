@@ -192,4 +192,7 @@ export type log = {
 }
 
 
-export type combinedBuilder = Omit<aggregatedBuilder, 'runs'> 
+export type combinedBuilder = Omit<aggregatedBuilder, 'runs'>
+export interface dbQueueEntry extends combinedBuilder {
+    builder_run: builder_runs
+}
