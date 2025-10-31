@@ -62,6 +62,6 @@ export type NodeChannelMessage = {
 }
 
 export type BuildQueueEntry = {
-    published_at: number, // The timestamp when the job was added to the queue
-    job: BuildChannelMessage // The job that was added to the queue
+    published_at: number, // The timestamp when the update was added to the queue
+    job: BuildChannelMessage // The update that was added to the queue
 }
