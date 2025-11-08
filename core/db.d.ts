@@ -32,6 +32,7 @@ export type builder_runs = {
     builder_id: number,
     status: string,
     started_at: Date | null,
+    updated_at: Date,
     ended_at: Date | null,
     node: string,
     gitcommit: string,
