@@ -208,5 +208,8 @@ export type node = {
 
 export type combinedBuilder = Omit<aggregatedBuilder, 'runs'>
 export interface dbQueueEntry extends combinedBuilder {
-    builder_run: builder_runs_with_node
+    builder_run: {
+        run: builder_runs,
+        node_info: node
+    }
 }
