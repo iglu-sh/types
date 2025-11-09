@@ -37,7 +37,11 @@ export type builder_runs = {
     node: string,
     gitcommit: string,
     duration: string,
-    log: string
+    log: string,
+    node_id: string
+}
+export interface builder_runs_with_node extends builder_runs {
+    node_info: node
 }
 export type cache_key = {
     id: number,
@@ -192,9 +196,17 @@ export type log = {
     resource_name: string,
     updated_by: User,
 }
-
+export type node = {
+    id: string,
+    node_name: string,
+    node_address: string,
+    node_port: string,
+    node_version: string,
+    node_arch: string,
+    node_max_jobs: string
+}
 
 export type combinedBuilder = Omit<aggregatedBuilder, 'runs'>
 export interface dbQueueEntry extends combinedBuilder {
-    builder_run: builder_runs
+    builder_run: builder_runs_with_node
 }
