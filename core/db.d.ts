@@ -213,3 +213,10 @@ export interface dbQueueEntry extends combinedBuilder {
         node_info: node
     }
 }
+
+export type pkgsInfo = {
+  cstoresuffix: string,
+  size: number,
+  timestamp: Date
+}
+
