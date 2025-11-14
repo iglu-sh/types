@@ -152,6 +152,9 @@ export type aggregatedBuilder = {
     cachix_config: cachixconfigs,
     build_options: buildoptions
 }
+export interface combinedSetupBuilder extends combinedBuilder{
+    cache_uri: string
+}
 export type xTheEverythingType = {
     cache: cache,
     builders: aggregatedBuilder[] | null,
