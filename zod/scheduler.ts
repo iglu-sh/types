@@ -1,5 +1,5 @@
 import {z} from "zod"
-import {valid_build_states as type_build_states} from "@types/core/db";
+import {valid_build_states as type_build_states} from "../core/db";
 const valid_build_states:type_build_states[] = ["created", "claimed", "starting", "running", "failed", "success", "aborted"]
 export const controllerStateUpdateSchema = z.object({
     old_state: z.enum(valid_build_states),
