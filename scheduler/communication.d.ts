@@ -1,6 +1,6 @@
 // Holds types for communication between the scheduler and the controller
 
-import {cache, log, builder_runs} from "../core/db";
+import {cache, log, builder_runs, valid_build_states} from "../core/db";
 
 export type healthCheckResponse = {
     status: 'OK' | 'NOK';
@@ -56,4 +56,12 @@ export type buildUpdate = {
 export type queueEntry = {
     job_id: string,
     build_config_id: string
+}
+
+// Used to inform the controller about state changes in the builder
+export type controllerStateUpdate = {
+    "old_state": valid_build_states,
+    "new_state": valid_build_states,
+    "timestamp": Date,
+    "job_id": number,
 }

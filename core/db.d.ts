@@ -1,7 +1,7 @@
 import {arch} from "@types/controller";
 
 export type uuid = `${string}-${string}-${string}-${string}-${string}`;
-
+export type valid_build_states = "created" | "claimed" | "starting" | "running" | "failed" | "success" | "aborted"
 export type User = {
     id: uuid;
     username: string;
@@ -30,7 +30,7 @@ export type builder = {
 export type builder_runs = {
     id: number,
     builder_id: number,
-    status: string,
+    status: valid_build_states,
     started_at: Date | null,
     updated_at: Date,
     ended_at: Date | null,
