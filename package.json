@@ -1,6 +1,6 @@
 {
   "name": "@iglu-sh/types",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "repository": "https://github.com/iglu-sh/types",
   "devDependencies": {
     "@types/bun": "latest"
