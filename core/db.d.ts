@@ -1,7 +1,7 @@
 import {arch} from "@types/controller";
 
 export type uuid = `${string}-${string}-${string}-${string}-${string}`;
-export type valid_build_states = "created" | "claimed" | "starting" | "running" | "failed" | "success" | "aborted"
+export type valid_build_states = "created" | "claimed" | "starting" | "running" | "failed" | "success" | "canceled"
 export type User = {
     id: uuid;
     username: string;
