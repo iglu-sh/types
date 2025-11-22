@@ -66,7 +66,9 @@ export type cachixconfigs = {
     push: boolean,
     target: number,
     apikey: string,
+    apikeyid: number,
     signingkey: string,
+    signingkeyid: number,
     buildoutpudir: string
 }
 export type git_configs = {
