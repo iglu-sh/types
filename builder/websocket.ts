@@ -4,4 +4,5 @@ export type wsMsg = {
     msg?: string,
     stdout?: string,
     childExitCode?: number
+    timestamp: Date
 }
